@@ -1,0 +1,55 @@
+{
+    "name": "sabroan/psr-11",
+    "description": "A lightweight PSR-11 container",
+    "license": "MIT",
+    "version": "1.0.0",
+    "require": {
+        "php": ">=8.5",
+        "psr/container": "^2",
+        "sabroan/di-reflection": "dev-main"
+    },
+    "require-dev": {
+        "ergebnis/composer-normalize": "^2.54",
+        "friendsofphp/php-cs-fixer": "^3.95",
+        "phpstan/extension-installer": "^1.4",
+        "phpstan/phpstan": "^2.3",
+        "phpstan/phpstan-deprecation-rules": "^2.0",
+        "phpstan/phpstan-strict-rules": "^2.1",
+        "phpunit/phpunit": "^13",
+        "roave/security-advisories": "dev-latest",
+        "vimeo/psalm": "^7@beta"
+    },
+    "provide": {
+        "psr/container-implementation": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Sabroan\\DI\\Container\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Sabroan\\DI\\Container\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "ergebnis/composer-normalize": true,
+            "phpstan/extension-installer": true
+        }
+    },
+    "scripts": {
+        "check": [
+            "@composer-check",
+            "@cs-check",
+            "@phpstan",
+            "@psalm",
+            "@phpunit"
+        ],
+        "composer-check": "composer normalize",
+        "cs-check": "vendor/bin/php-cs-fixer check --diff",
+        "phpstan": "vendor/bin/phpstan analyse --memory-limit=1G",
+        "phpunit": "vendor/bin/phpunit --testdox --reverse-list --stop-on-failure --display-phpunit-deprecations --display-deprecations --display-warnings --display-phpunit-notices",
+        "psalm": "vendor/bin/psalm"
+    }
+}
