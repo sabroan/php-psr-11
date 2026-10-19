@@ -2,7 +2,11 @@
     "name": "sabroan/psr-11",
     "description": "A lightweight PSR-11 container",
     "license": "MIT",
+    "type": "library",
     "version": "1.0.0",
+    "keywords": [
+        "psr-11"
+    ],
     "require": {
         "php": ">=8.5",
         "psr/container": "^2",
