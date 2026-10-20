@@ -1,14 +1,14 @@
-# DI Container
+# PSR-11 DI Container
 
-A modular PHP dependency injection library that follows PSR-11, supports automatic dependency resolution, circular dependency detection, alias handling, and weak-reference object caching.
+A modular dependency injection library, supports automatic dependency resolution, circular dependency detection, alias handling, and weak-reference object caching.
 
 ## Features
 
-- **Composite Delegation:** Combine multiple containers using AggregateContainer.
 - **Lazy Auto-Wiring:** Automatically creates objects and resolves their dependencies, initializing them only when needed.
 - **Loop Detection:** Catch circular dependencies during resolution.
 - **Recursive Alias Resolution:** Automatically follows alias chains to find the target service.
 - **Weak-Reference Caching:** Reuse objects while they're in use without preventing garbage collection.
+- **Composite Delegation:** Combine multiple containers using AggregateContainer.
 
 ## Installation
 

@@ -53,7 +53,7 @@
         "composer-check": "composer normalize",
         "cs-check": "vendor/bin/php-cs-fixer check --diff",
         "phpstan": "vendor/bin/phpstan analyse --memory-limit=1G",
-        "phpunit": "vendor/bin/phpunit --testdox --reverse-list --stop-on-failure --display-phpunit-deprecations --display-deprecations --display-warnings --display-phpunit-notices",
+        "phpunit": "vendor/bin/phpunit --testdox --reverse-list --stop-on-failure --display-phpunit-deprecations --display-deprecations --display-warnings --display-phpunit-notices --display-errors --display-all-issues",
         "psalm": "vendor/bin/psalm"
     }
 }
